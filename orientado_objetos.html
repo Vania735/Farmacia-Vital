@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientado a Objetos - FarmaVital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/orientado_objetos.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <script src="./js/navigation-v2.js" defer></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-pills"></i>
+                <h1>Farma<span>Vital</span></h1>
+            </div>
+                        <nav id="main-nav">
+    <ul>
+        <li><a href="index.html">INICIO</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-home"></i> Página Principal</h4>
+                        <ul>
+                            <li><a href="#ofertas"><strong>Ver Ofertas Especiales</strong><span>4 productos en descuento</span></a></li>
+                            <li><a href="productos.html"><strong>Ver Todos los Productos</strong><span>Catálogo completo</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-shopping-cart"></i> Productos Destacados</h4>
+                        <div class="product-list">
+                            <div class="product-item">
+                                <strong>Vitamina C 1000mg</strong>
+                                <span>Bs 12.50 (24% OFF)</span>
+                            </div>
+                            <div class="product-item">
+                                <strong>Jarabe para la Tos</strong>
+                                <span>Bs 16.00 (20% OFF)</span>
+                            </div>
+                            <div class="product-item">
+                                <strong>Termómetro Digital</strong>
+                                <span>Bs 24.10 (34% OFF)</span>
+                            </div>
+                            <div class="product-item">
+                                <strong>Kit Primeros Auxilios</strong>
+                                <span>Bs 92.00 (20% OFF)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li><a href="analisis_estructurado.html">ANÁLISIS ESTRUCTURADO</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-cube"></i> Modelo Ambiental</h4>
+                        <ul>
+                            <li><a href="analisis_estructurado.html#modelo-ambiental">Declaración de Propósitos</a></li>
+                            <li><a href="analisis_estructurado.html#diagrama-contexto">Diagrama de Contexto</a></li>
+                            <li><a href="analisis_estructurado.html#lista-acontecimientos">Lista de Acontecimientos</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-chart-line"></i> Modelo de Comportamiento</h4>
+                        <ul>
+                            <li><a href="analisis_estructurado.html#dfd-niveles">Diagramas DFD</a></li>
+                            <li><a href="analisis_estructurado.html#diagrama-er">Diagrama Entidad-Relación</a></li>
+                            <li><a href="analisis_estructurado.html#diagrama-estados">Diagrama de Estados</a></li>
+                            <li><a href="analisis_estructurado.html#documentacion">Documentación</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li><a href="orientado_objetos.html"class="active">ORIENTADO OBJETOS</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-cogs"></i> AOO - Análisis</h4>
+                        <ul>
+                            <li><a href="orientado_objetos.html#conceptos">Conceptos Fundamentales</a></li>
+                            <li><a href="orientado_objetos.html#casos-uso">Diagrama de Casos de Uso</a></li>
+                            <li><a href="orientado_objetos.html#modelo-dominio">Modelo de Dominio</a></li>
+                            <li><a href="orientado_objetos.html#glosario">Glosario de Términos</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-code"></i> DOO - Diseño</h4>
+                        <ul>
+                            <li><a href="orientado_objetos.html#diagrama-clases">Diagrama de Clases</a></li>
+                            <li><a href="orientado_objetos.html#comportamiento">Diagramas de Comportamiento</a></li>
+                            <li><a href="orientado_objetos.html#patrones">Patrones de Diseño</a></li>
+                            <li><a href="orientado_objetos.html#arquitectura">Arquitectura del Sistema</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-laptop-code"></i> POO - Programación</h4>
+                        <ul>
+                            <li><a href="orientado_objetos.html#principios">Principios de POO</a></li>
+                            <li><a href="orientado_objetos.html#ejemplos">Ejemplos de Código</a></li>
+                            <li><a href="orientado_objetos.html#tecnologias">Tecnologías Utilizadas</a></li>
+                            <li><a href="orientado_objetos.html#pruebas">Pruebas Unitarias</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li><a href="marco_teorico.html">MARCO TEORICO</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-book"></i> Secciones Principales</h4>
+                        <ul>
+                            <li><a href="marco_teorico.html#introduccion">I. Introducción</a></li>
+                            <li><a href="marco_teorico.html#antecedentes">II. Antecedentes</a></li>
+                            <li><a href="marco_teorico.html#problema">III. Planteamiento del Problema</a></li>
+                            <li><a href="marco_teorico.html#arbol">IV. Árbol de Problemas</a></li>
+                            <li><a href="marco_teorico.html#formulacion">V. Formulación del Problema</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-bullseye"></i> Objetivos</h4>
+                        <ul>
+                            <li><a href="marco_teorico.html#objetivo-general">VI. Objetivo General</a></li>
+                            <li><a href="marco_teorico.html#objetivos-especificos">VII. Objetivos Específicos</a></li>
+                            <li><a href="marco_teorico.html#metodologia">VIII. Metodología</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-calendar-alt"></i> Planificación</h4>
+                        <ul>
+                            <li><a href="marco_teorico.html#cronograma">Cronograma General</a></li>
+                            <li><a href="marco_teorico.html#fases">Fases del Proyecto</a></li>
+                            <li><a href="marco_teorico.html#gantt">Diagrama de Gantt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li><a href="productos.html">PRODUCTOS</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-filter"></i> Navegación Rápida</h4>
+                        <ul>
+                            <li><a href="productos.html#gripe"><strong>Gripe y Resfriado</strong><span>4 productos</span></a></li>
+                            <li><a href="productos.html#dolor"><strong>Dolor y Fiebre</strong><span>3 productos</span></a></li>
+                            <li><a href="productos.html#estomago"><strong>Estómago</strong><span>3 productos</span></a></li>
+                            <li><a href="productos.html#diabetes"><strong>Diabetes</strong><span>2 productos</span></a></li>
+                            <li><a href="productos.html#corazon"><strong>Corazón</strong><span>3 productos</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-tags"></i> Más Categorías</h4>
+                        <ul>
+                            <li><a href="productos.html#nervios">Sistema Nervioso</a></li>
+                            <li><a href="productos.html#huesos">Salud Ósea</a></li>
+                            <li><a href="productos.html#alergias">Alergias</a></li>
+                            <li><a href="productos.html#piel">Cuidado de la Piel</a></li>
+                            <li><a href="productos.html#vitaminas">Vitaminas</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-shopping-cart"></i> Características</h4>
+                        <ul>
+                            <li><strong>Total Productos:</strong> 88 productos</li>
+                            <li><strong>Filtros:</strong> Por categoría y edad</li>
+                            <li><strong>Carrito:</strong> Funcionalidad completa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li><a href="video.html">VIDEO</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-play-circle"></i> Contenido del Video</h4>
+                        <ul>
+                            <li><a href="video.html#video-presentacion">Presentación del Sistema</a></li>
+                            <li><a href="video.html#demo">Demo Funcionamiento</a></li>
+                            <li><a href="video.html#modulos">Explicación de Módulos</a></li>
+                            <li><a href="video.html#interfaces">Interfaces de Usuario</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-info-circle"></i> Información Técnica</h4>
+                        <ul>
+                            <li><strong>Duración:</strong> 5-10 minutos</li>
+                            <li><strong>Formato:</strong> HD 1080p</li>
+                            <li><strong>Subtítulos:</strong> Disponibles</li>
+                            <li><strong>Idioma:</strong> Español</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li><a href="contactos.html">CONTACTOS</a>
+            <div class="nav-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-address-card"></i> Contacto Directo</h4>
+                        <ul>
+                            <li><a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp<span>+1234567890</span></a></li>
+                            <li><a href="https://facebook.com/farmavital" target="_blank"><i class="fab fa-facebook"></i> Facebook<span>/farmavital</span></a></li>
+                            <li><a href="mailto:info@farmavital.com"><i class="fas fa-envelope"></i> Email<span>info@farmavital.com</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4><i class="fas fa-map-marker-alt"></i> Información</h4>
+                        <ul>
+                            <li><strong>Dirección:</strong> Av. Principal 123</li>
+                            <li><strong>Teléfono:</strong> (123) 456-7890</li>
+                            <li><strong>Horario:</strong> Lunes a Sábado</li>
+                            <li><strong>Horas:</strong> 8:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Overlay para el menú móvil -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Análisis y Diseño Orientado a Objetos</h2>
+            <p>Modelado del sistema mediante el paradigma de orientación a objetos</p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Contenido Principal -->
+    <section class="diagrams-section">
+        <div class="container">
+            
+            <!-- MODELO AMBIENTAL -->
+            <div class="phase-section">
+                <h2 class="phase-title">MODELO AMBIENTAL</h2>
+                <div class="subsection">
+                    <div class="concept">
+                            <h2 class="phase-title">Declaracion de Propositos</h2>
+                        <img src="./imagenes/DIAGRAMAS/declaracion_de_proposito.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                <!-- Conceptos Fundamentales -->
+                
+                    <div class="concept-space">
+                        <h2 class="phase-title">Diagrama de Contexto</h2><br>
+                       <img src="./imagenes/DIAGRAMAS/diagrama_contexto.png" width="100%" height="auto-fit"> 
+                    </div>
+                    <div class="concept" background-color: white>
+                            <h2 class="phase-title">Lista de Acontecimientos</h2>
+                        <img src="./imagenes/DIAGRAMAS/lista_acontecimientos.png" width="80%" height="auto-fit"> 
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MODELO DE COMPORTAMIENTO -->
+            <div class="phase-section">
+                <h2 class="phase-title">MODELO DE COMPORTAMIENTO</h2>
+                <div class="subsection">
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 1</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-NIVEL 1-fig 0.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 2 Fig.1</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-Nivel2.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 3 Fig.1</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-nivel3.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 2 Fig.2</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-Nivel2-fig2.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 3 Fig.2</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-Nivel3-fig2.2.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+        
+                </div>
+            </div>
+             <div class="phase-section">
+                <div class="subsection">
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 2 Fig.3</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-nivel2-fig3.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 3 Fig.3</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-Nivel3-fig3.3.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                    <div class="concept">
+                            <h2 class="phase-title">DFD NIVEL 2 Fig.4</h2>
+                        <img src="./imagenes/DIAGRAMAS/DFD-nivel2-fig4.png" width="100%" height="auto-fit"> 
+                        
+                    </div>
+                  
+        
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="phase-section">
+                <!-- Diagrama de Casos de Uso -->
+                <div class="subsection">
+                    <h3><i class="fas fa-user-circle"></i> DIAGRAMA DE CLASES</h3>
+                    <div class="concept">
+                            <h2 class="phase-title"></h2>
+                        <img src="./imagenes/DIAGRAMAS/Diagrama_de_clases.png" width="100%" height="auto-fit"> 
+                        
+                    </div>                    
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FarmaVital</h3>
+                    <p>Tu farmacia de confianza, comprometida con tu salud y bienestar. Ofrecemos productos farmacéuticos de calidad y servicios de salud integrales.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="index.html">Inicio</a>
+                    <a href="analisis_estructurado.html">Análisis Estructurado</a>
+                    <a href="orientado_objetos.html">Orientado a Objetos</a>
+                    <a href="marco_teorico.html">Marco Teórico</a>
+                    <a href="video.html">Video Tutorial</a>
+                    <a href="contactos.html">Contactos</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@farmavital.com</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Sábado: 8:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 FarmaVital. Todos los derechos reservados. | Proyecto de Análisis y Diseño de Sistemas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú desplegable para móviles
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+        const overlay = document.getElementById('overlay');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Cambiar ícono del botón
+            const icon = menuToggle.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        overlay.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // Restaurar ícono del botón
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+                
+                // Restaurar ícono del botón
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Efecto de aparición al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar efecto a las secciones
+        document.querySelectorAll('.phase-section, .subsection').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

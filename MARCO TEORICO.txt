@@ -1,0 +1,731 @@
+https://github.com/Vania735/ANALISIS.git
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Teórico - FarmaVital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales específicos para Marco Teórico */
+        .theoretical-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .content-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--light);
+        }
+        
+        .content-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .subsection {
+            margin: 30px 0;
+            padding: 25px;
+            background: var(--light);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .subsection h4 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .problem-tree {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px dashed var(--gray);
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .problem-tree h4 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .gantt-chart {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid var(--light);
+            margin: 20px 0;
+        }
+        
+        .gantt-chart h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .phase-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .phase-table th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .phase-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--light);
+        }
+        
+        .phase-table tr:hover {
+            background: var(--light);
+        }
+        
+        .methodology-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .methodology-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .methodology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .methodology-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .methodology-card i {
+            color: var(--secondary);
+        }
+        
+        .objective-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objective-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--light);
+        }
+        
+        .objective-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        .general-objective {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .general-objective h4 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .reference-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            width: 50%;
+            padding: 20px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .theoretical-content {
+                padding: 20px;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-pills"></i>
+                <h1>Farma<span>Vital</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="analisis_estructurado.html">ANÁLISIS ESTRUCTURADO</a></li>
+                    <li><a href="orientado_objetos.html">ORIENTADO A OBJETOS</a></li>
+                    <li><a href="marco_teorico.html" class="active">MARCO TEÓRICO</a></li>
+                    <li><a href="video.html">VIDEO</a></li>
+                    <li><a href="contactos.html">CONTACTOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Marco Teórico del Proyecto</h2>
+            <p>Fundamentación teórica, metodológica y conceptual del sistema de gestión para FarmaVital</p>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <section class="diagrams-section">
+        <div class="container">
+            <div class="theoretical-content">
+                
+                <!-- I. GENERALIDADES Y MARCO TEÓRICO -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h2 class="section-title">I. GENERALIDADES Y MARCO TEÓRICO</h2>
+                    </div>
+                    
+                    <!-- Introducción -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-play-circle"></i> Introducción</h4>
+                        <p>El presente proyecto tiene como objetivo desarrollar un sistema de gestión integral para la farmacia "FarmaVital", que permita optimizar los procesos de venta, control de inventario, gestión de proveedores y atención al cliente. En un contexto donde la digitalización se ha vuelto fundamental para la competitividad empresarial, la implementación de un sistema automatizado se convierte en una necesidad estratégica para mejorar la eficiencia operativa y la calidad del servicio.</p>
+                        <p>La farmacéutica actual enfrenta desafíos significativos en la gestión de medicamentos, control de caducidades, seguimiento de recetas médicas y cumplimiento de normativas sanitarias. Este sistema busca abordar estas problemáticas mediante soluciones tecnológicas basadas en los paradigmas de análisis estructurado y orientado a objetos.</p>
+                    </div>
+                    
+                    <!-- Antecedentes -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-history"></i> Antecedentes</h4>
+                        <p>Los sistemas de gestión para farmacias han evolucionado significativamente en las últimas décadas. Inicialmente, las farmacias operaban con sistemas manuales basados en registros físicos, lo que generaba problemas de precisión y eficiencia. Con la llegada de la informatización en los años 90, surgieron los primeros sistemas computarizados que permitían un mejor control del inventario y ventas.</p>
+                        <p>En la actualidad, las tendencias apuntan hacia sistemas integrados que combinan:</p>
+                        <ul>
+                            <li>Gestión de inventario en tiempo real</li>
+                            <li>Control de caducidades automatizado</li>
+                            <li>Interfaz con sistemas de salud públicos y privados</li>
+                            <li>Plataformas multicanal (presencial, online, delivery)</li>
+                            <li>Análisis predictivo para la gestión de stock</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Planteamiento del Problema -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-question-circle"></i> Planteamiento del Problema</h4>
+                        <p>La farmacia "FarmaVital" actualmente opera con sistemas fragmentados que no se comunican entre sí, generando los siguientes problemas:</p>
+                        <ul>
+                            <li>Pérdida de tiempo en la búsqueda manual de productos en inventario</li>
+                            <li>Errores frecuentes en el registro de ventas y actualización de stock</li>
+                            <li>Dificultad en el control de medicamentos caducados</li>
+                            <li>Falta de integración entre el sistema de ventas y el control de recetas médicas</li>
+                            <li>Ineficiencia en la gestión de proveedores y pedidos</li>
+                            <li>Limitaciones en la generación de reportes gerenciales</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Árbol de Problemas -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-tree"></i> Árbol de Problemas</h4>
+                        <div class="problem-tree">
+                            <h4>PROBLEMA CENTRAL</h4>
+                            <p style="font-weight: bold; color: var(--accent); font-size: 1.2rem;">Ineficiencia en la gestión operativa de la farmacia</p>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+                                <div style="background: #ffebee; padding: 15px; border-radius: 8px;">
+                                    <h5 style="color: #d32f2f;">CAUSAS</h5>
+                                    <ul>
+                                        <li>Sistemas desintegrados</li>
+                                        <li>Procesos manuales</li>
+                                        <li>Falta de automatización</li>
+                                        <li>Capacitación insuficiente</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: #e8f5e8; padding: 15px; border-radius: 8px;">
+                                    <h5 style="color: #388e3c;">EFECTOS</h5>
+                                    <ul>
+                                        <li>Pérdida de clientes</li>
+                                        <li>Errores en inventario</li>
+                                        <li>Pérdidas económicas</li>
+                                        <li>Insatisfacción del cliente</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulación del Problema -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-edit"></i> Formulación del Problema</h4>
+                        <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <p style="font-style: italic; margin: 0;">
+                                "¿De qué manera el diseño e implementación de un sistema de gestión integral basado en los paradigmas de análisis estructurado y orientado a objetos puede optimizar los procesos operativos, mejorar el control de inventario y enhance la experiencia del cliente en la farmacia FarmaVital?"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PROPÓSITO DEL ESTUDIO -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h2 class="section-title">PROPÓSITO DEL ESTUDIO</h2>
+                    </div>
+                    
+                    <!-- Objetivo General -->
+                    <div class="general-objective">
+                        <h4>OBJETIVO GENERAL</h4>
+                        <p>Diseñar e implementar un sistema de gestión integral para la farmacia FarmaVital que optimice los procesos operativos, mejore el control de inventario y enhance la experiencia del cliente, aplicando los paradigmas de análisis estructurado y orientado a objetos.</p>
+                    </div>
+                    
+                    <!-- Objetivos Específicos -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-list-ol"></i> Objetivos Específicos</h4>
+                        <ul class="objective-list">
+                            <li>Analizar los procesos actuales de la farmacia para identificar áreas de mejora y requerimientos del sistema</li>
+                            <li>Diseñar la arquitectura del sistema aplicando el paradigma de análisis estructurado con sus respectivos diagramas (DFD, Diccionario de Datos, Especificación de Procesos)</li>
+                            <li>Modelar el sistema utilizando el paradigma orientado a objetos con diagramas UML (Casos de Uso, Clases, Secuencia, Actividades)</li>
+                            <li>Desarrollar los módulos principales del sistema: ventas, inventario, proveedores y reportes</li>
+                            <li>Implementar y validar el sistema mediante pruebas de funcionalidad y usabilidad</li>
+                            <li>Capacitar al personal en el uso del nuevo sistema y documentar el proceso de implementación</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Justificación -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-clipboard-check"></i> Justificación</h4>
+                        <p>La implementación de este sistema se justifica por:</p>
+                        <div class="methodology-cards">
+                            <div class="methodology-card">
+                                <h4><i class="fas fa-chart-line"></i> Justificación Económica</h4>
+                                <p>Reducción de pérdidas por caducidades, optimización del inventario y aumento de la productividad del personal.</p>
+                            </div>
+                            <div class="methodology-card">
+                                <h4><i class="fas fa-users"></i> Justificación Social</h4>
+                                <p>Mejora en la atención al cliente, acceso más rápido a medicamentos y mejor servicio a la comunidad.</p>
+                            </div>
+                            <div class="methodology-card">
+                                <h4><i class="fas fa-graduation-cap"></i> Justificación Académica</h4>
+                                <p>Aplicación práctica de los conocimientos en análisis y diseño de sistemas bajo ambos paradigmas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Alcances -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-arrows-alt-h"></i> Alcances y Limitaciones</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                            <div style="background: #e8f5e8; padding: 20px; border-radius: 8px;">
+                                <h5 style="color: var(--secondary);">ALCANCES</h5>
+                                <ul>
+                                    <li>Módulo de ventas y facturación</li>
+                                    <li>Gestión de inventario y caducidades</li>
+                                    <li>Control de proveedores y pedidos</li>
+                                    <li>Gestión de clientes y recetas</li>
+                                    <li>Reportes gerenciales básicos</li>
+                                </ul>
+                            </div>
+                            <div style="background: #ffebee; padding: 20px; border-radius: 8px;">
+                                <h5 style="color: var(--accent);">LIMITACIONES</h5>
+                                <ul>
+                                    <li>No incluye integración con sistemas de salud externos</li>
+                                    <li>No contempla e-commerce avanzado</li>
+                                    <li>Presupuesto limitado para hardware</li>
+                                    <li>Tiempo limitado para desarrollo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- METODOLOGÍA -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h2 class="section-title">METODOLOGÍA DE INVESTIGACIÓN</h2>
+                    </div>
+                    
+                    <!-- Método, Medios e Instrumentos -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-tools"></i> Método, Medios e Instrumentos</h4>
+                        
+                        <div class="methodology-cards">
+                            <div class="methodology-card">
+                                <h4><i class="fas fa-search"></i> Método de Investigación</h4>
+                                <p><strong>Enfoque:</strong> Mixto (cualitativo y cuantitativo)</p>
+                                <p><strong>Tipo:</strong> Aplicada - Descriptiva</p>
+                                <p><strong>Diseño:</strong> Investigación-Acción</p>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <h4><i class="fas fa-desktop"></i> Medios Tecnológicos</h4>
+                                <ul>
+                                    <li>Visual Studio Code</li>
+                                    <li>Lucidchart para diagramas</li>
+                                    <li>MySQL para base de datos</li>
+                                    <li>HTML5, CSS3, JavaScript</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <h4><i class="fas fa-clipboard-list"></i> Instrumentos</h4>
+                                <ul>
+                                    <li>Entrevistas con personal</li>
+                                    <li>Observación directa</li>
+                                    <li>Cuestionarios</li>
+                                    <li>Análisis documental</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Paradigmas de Desarrollo -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-sitemap"></i> Paradigmas de Desarrollo</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                            <div style="background: #e3f2fd; padding: 20px; border-radius: 8px;">
+                                <h5 style="color: var(--primary);">ANÁLISIS ESTRUCTURADO</h5>
+                                <ul>
+                                    <li>Enfoque por procesos</li>
+                                    <li>Diagramas de Flujo de Datos</li>
+                                    <li>Diccionario de Datos</li>
+                                    <li>Especificación de procesos</li>
+                                    <li>Diagrama de estructura</li>
+                                </ul>
+                            </div>
+                            <div style="background: #e8f5e8; padding: 20px; border-radius: 8px;">
+                                <h5 style="color: var(--secondary);">ORIENTADO A OBJETOS</h5>
+                                <ul>
+                                    <li>Enfoque por objetos</li>
+                                    <li>Diagramas UML</li>
+                                    <li>Encapsulamiento</li>
+                                    <li>Herencia y polimorfismo</li>
+                                    <li>Modelo de dominio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PLANIFICACIÓN -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h2 class="section-title">PLANIFICACIÓN DE ACTIVIDADES</h2>
+                    </div>
+                    
+                    <!-- Fases del Proyecto -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-project-diagram"></i> Fases del Proyecto</h4>
+                        
+                        <table class="phase-table">
+                            <thead>
+                                <tr>
+                                    <th>Fase</th>
+                                    <th>Actividades</th>
+                                    <th>Duración</th>
+                                    <th>Entregables</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1. Análisis</strong></td>
+                                    <td>Relevamiento de requerimientos, entrevistas, documentación</td>
+                                    <td>3 semanas</td>
+                                    <td>Documento de requerimientos</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2. Diseño</strong></td>
+                                    <td>Diagramas UML y estructurados, diseño de BD</td>
+                                    <td>4 semanas</td>
+                                    <td>Modelos y especificaciones</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3. Desarrollo</strong></td>
+                                    <td>Programación, implementación de módulos</td>
+                                    <td>6 semanas</td>
+                                    <td>Sistema funcional</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4. Pruebas</strong></td>
+                                    <td>Testing, corrección de errores</td>
+                                    <td>2 semanas</td>
+                                    <td>Reporte de pruebas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5. Implementación</strong></td>
+                                    <td>Capacitación, puesta en producción</td>
+                                    <td>2 semanas</td>
+                                    <td>Sistema operativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Cronograma -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-chart-gantt"></i> Cronograma - Diagrama de Gantt</h4>
+                        <div class="gantt-chart">
+                            <h4>CRONOGRAMA DE ACTIVIDADES</h4>
+                            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                                <p style="color: var(--gray); font-style: italic;">
+                                    [Espacio para insertar el Diagrama de Gantt del proyecto]
+                                </p>
+                                <p>El diagrama de Gantt mostrará la planificación temporal de todas las actividades del proyecto, 
+                                indicando fechas de inicio, duración y dependencias entre tareas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline -->
+                    <div class="subsection">
+                        <h4><i class="fas fa-hourglass-half"></i> Línea de Tiempo del Proyecto</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h5>Semana 1-3</h5>
+                                    <p><strong>Análisis de Requerimientos</strong></p>
+                                    <p>Entrevistas con stakeholders, documentación de procesos actuales, identificación de problemas</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h5>Semana 4-7</h5>
+                                    <p><strong>Diseño del Sistema</strong></p>
+                                    <p>Elaboración de diagramas UML y estructurados, diseño de base de datos, prototipado</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h5>Semana 8-13</h5>
+                                    <p><strong>Desarrollo</strong></p>
+                                    <p>Programación de módulos, implementación de funcionalidades, integración</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h5>Semana 14-15</h5>
+                                    <p><strong>Pruebas</strong></p>
+                                    <p>Testing de funcionalidades, corrección de errores, optimización</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h5>Semana 16-17</h5>
+                                    <p><strong>Implementación</strong></p>
+                                    <p>Capacitación del personal, puesta en producción, soporte inicial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FarmaVital</h3>
+                    <p>Tu farmacia de confianza, comprometida con tu salud y bienestar. Ofrecemos productos farmacéuticos de calidad y servicios de salud integrales.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="index.html">Inicio</a>
+                    <a href="analisis_estructurado.html">Análisis Estructurado</a>
+                    <a href="orientado_objetos.html">Orientado a Objetos</a>
+                    <a href="marco_teorico.html">Marco Teórico</a>
+                    <a href="video.html">Video Tutorial</a>
+                    <a href="contactos.html">Contactos</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@farmavital.com</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Sábado: 8:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 FarmaVital. Todos los derechos reservados. | Proyecto de Análisis y Diseño de Sistemas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto de aparición al hacer scroll para las secciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar efecto a las secciones y tarjetas
+        document.querySelectorAll('.content-section, .methodology-card, .subsection').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+
+        // Efecto especial para los items de la timeline
+        document.querySelectorAll('.timeline-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(' + (index % 2 === 0 ? '-50px' : '50px') + ')';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
